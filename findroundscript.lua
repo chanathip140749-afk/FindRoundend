@@ -6,7 +6,7 @@ local voteRemote = game:GetService("ReplicatedStorage"):WaitForChild("Systems"):
 -- ฟังก์ชันสำหรับส่งคำสั่ง Retry
 local function sendRetry()
     print("Round Ended! Sending Retry signal...")
-    local args = {"Retry"}
+    local args = {"Next"}
     voteRemote:FireServer(unpack(args))
 end
 
@@ -18,5 +18,3 @@ roundEnd:GetPropertyChangedSignal("Enabled"):Connect(function()
         sendRetry()
     end
 end)
-
-print("Auto Retry Script is now running and waiting for RoundEnd...")
