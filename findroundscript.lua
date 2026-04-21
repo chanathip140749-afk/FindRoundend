@@ -3,7 +3,7 @@ local playerGui = player:WaitForChild("PlayerGui")
 local roundEnd = playerGui:WaitForChild("RoundEnd")
 local voteRemote = game:GetService("ReplicatedStorage"):WaitForChild("Systems"):WaitForChild("Voting"):WaitForChild("Vote")
 local function sendRetry()
-    local args = {"Retry"}
+    local args = {"Next"}
 
     voteRemote:FireServer(unpack(args))
 end
